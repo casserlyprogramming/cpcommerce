@@ -1,12 +1,5 @@
 <?php
-/*
-	Plugin Name: CP Commerce
-	Plugin URI: http://www.casserlyprogramming.com
-	Description: Our in house e-Commerce plugin for Wordpress
-	Version: 0.1
-	Author: Daniel Casserly
-	Author URI: http://dandalfprogramming.blogspot.co.uk/
-*/
+
 
 // Product Type
 function cpproduct_init()

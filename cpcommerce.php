@@ -12,7 +12,7 @@
 
 require plugin_dir_path( __FILE__ ) . '/cpcustomtypes.php' ;
 require plugin_dir_path( __FILE__ ) . '/cptaxonomies.php' ;
-require plugin_dir_path( __FILE__ ) . '/admin/cp_commerce_settings.php' ;
+require plugin_dir_path( __FILE__ ) . '/cpsettings.php' ;
 
 
 
