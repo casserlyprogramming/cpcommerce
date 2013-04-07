@@ -15,12 +15,32 @@ function cp_commerce_options_page()
 	These settings will allow the fine grain tuning of the CP Commerce part of this site..
 	<form action="options.php" method="post">
 	<?php settings_fields('cp_commerce_options');   ?>
-	Small Min: <?php cp_get_input('cp_small_min_value', 'text', get_option('cp_small_min_value')); ?><br/>
-	Small Max: <?php cp_get_input('cp_small_max_value', 'text', get_option('cp_small_max_value')); ?><br/>
-	Medium Min:<?php cp_get_input('cp_medium_min_value', 'text', get_option('cp_medium_min_value')); ?><br/>
-	Medium Max:<?php cp_get_input('cp_medium_max_value', 'text', get_option('cp_medium_max_value')); ?><br/>
-	Large Min: <?php cp_get_input('cp_large_min_value', 'text', get_option('cp_large_min_value')); ?><br/>
-	Large Max: <?php cp_get_input('cp_large_max_value', 'text', get_option('cp_large_max_value')); ?><br/>
+	<table>
+	<tr>
+	<td>Small Min: </td>
+	<td><?php cp_get_input('cp_small_min_value', 'text', get_option('cp_small_min_value')); ?><br/></td>
+	</tr>
+	<tr>
+	<td>Small Max: </td>
+	<td><?php cp_get_input('cp_small_max_value', 'text', get_option('cp_small_max_value')); ?><br/></td>
+	</tr>
+	<tr>
+	<td>Medium Min:</td>
+	<td><?php cp_get_input('cp_medium_min_value', 'text', get_option('cp_medium_min_value')); ?><br/></td>
+	</tr>
+	<tr>
+	<td>Medium Max:</td>
+	<td><?php cp_get_input('cp_medium_max_value', 'text', get_option('cp_medium_max_value')); ?><br/></td>
+	</tr>
+	<tr>
+	<td>Large Min:</td>
+	<td><?php cp_get_input('cp_large_min_value', 'text', get_option('cp_large_min_value')); ?><br/></td>
+	</tr>
+	<tr>
+	<td>Large Max: </td>
+	<td><?php cp_get_input('cp_large_max_value', 'text', get_option('cp_large_max_value')); ?><br/></td>
+	</tr>
+	</table>
 	<input class="button-primary" type="submit" value="<?php esc_attr_e('Save Changes'); ?>" />
 	</form>
 	</div>
@@ -35,9 +55,9 @@ function cp_commerce_settings_init()
 
 	register_setting( $menu_options, 'cp_small_min_value');
 	register_setting( $menu_options, 'cp_small_max_value');
+	register_setting( $menu_options, 'cp_medium_min_value');
 	register_setting( $menu_options, 'cp_medium_max_value');
-	register_setting( $menu_options, 'cp_medium_max_value');
-	register_setting( $menu_options, 'cp_large_max_value');
+	register_setting( $menu_options, 'cp_large_min_value');
 	register_setting( $menu_options, 'cp_large_max_value');
 	// Add Global Section to the page...
 	add_settings_section($size_section, 'Sizing Options', 'callback_size_settings_section', 'cp_commerce_size_options');
